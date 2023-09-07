@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require 'debug'
 
 require_relative './lib/reversi_methods'
 
@@ -15,6 +16,7 @@ class Reversi
   def run # rubocop:disable Metrics/MethodLength
     loop do
       output(@board)
+      
 
       if finished?(@board)
         puts '試合終了'
